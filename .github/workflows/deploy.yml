@@ -15,8 +15,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install Packages
+      - name: Install Angular cli
         run: npm install -g @angular/cli
+      - name: Install Packages
         run: npm install
       - name: Build page
         run: ng build --prod
