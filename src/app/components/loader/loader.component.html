@@ -1,0 +1,6 @@
+<nz-spin [nzIndicator]="loader" [nzTip]="message"></nz-spin>
+<ng-template #loader>
+  <span class="loader loader-small" *ngIf="small"></span>
+  <span class="loader" *ngIf="medium"></span>
+  <span class="loader loader-large" *ngIf="large"></span>
+</ng-template>

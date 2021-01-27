@@ -1,0 +1,209 @@
+//
+// Typography
+// --------------------------------------------------
+
+// Headings
+// -------------------------
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  small,
+  .small {
+    font-size: $small-font-size;
+    font-weight: normal;
+    line-height: $small-line-height;
+    color: $headings-small-color;
+  }
+}
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  font-family: $font-family-montserrat;
+  line-height: $headings-line-height;
+  letter-spacing: $letter-spacing-heading-s;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: $font-family-arial;
+  line-height: $line-height-base;
+}
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+  font-weight: $headings-font-weight;
+  margin-top: $font-margin;
+  margin-bottom: $font-margin;
+}
+h5, .h5,
+h6, .h6 {
+  font-weight: bold;
+}
+h1, .h1 {
+  font-size: $font-size-h1;
+}
+h2, .h2 {
+  font-size: $font-size-h2;
+}
+h3, .h3 {
+  font-size: $font-size-h3;
+}
+h4, .h4 {
+  font-size: $font-size-h4;
+}
+h5, .h5 {
+  font-size: $font-size-h5;
+  margin-top: $font-margin;
+  margin-bottom: $font-margin;
+}
+h6, .h6 {
+  font-size: $font-size-h6;
+  margin-top: ($line-height-base-computed / 2);
+  margin-bottom: ($line-height-base-computed / 2);
+}
+.title,
+.display1,
+.display2,
+.display3 {
+  font-family: $font-family-montserrat;
+
+}
+.title {
+  font-size: $font-size-h3;
+}
+.display1 {
+  font-size: $font-size-h2;
+}
+.display2 {
+  font-size: $font-size-h1;
+}
+.display3 {
+  font-size: $font-size-display3;
+}
+.display4 {
+  font-family: $font-family-montserrat;
+  font-size: $font-size-display4;
+}
+.title,
+.display1,
+.display2 {
+  letter-spacing: $letter-spacing-heading-s;
+}
+.display3,
+.display4 {
+  letter-spacing: $letter-spacing-heading-l;
+}
+
+// Body text
+// -------------------------
+.font-size-lead {
+  font-size: $font-size-lead;
+  line-height: $line-height-base;
+}
+.font-size-large {
+  font-size: $font-size-large;
+  line-height: $line-height-base;
+}
+.font-size-default {
+  font-size: $font-size-base;
+  line-height: $line-height-base-computed;
+}
+.font-size-small {
+  font-size: $font-size-small;
+  line-height: $line-height-base;
+}
+
+.lead {
+  margin-bottom: $line-height-base-computed;
+  font-size: $font-size-lead;
+  font-weight: normal;
+  line-height: $line-height-base;
+}
+
+p {
+  margin: 0 0 $paragraph-margin-bottom;
+}
+
+// Emphasis & misc
+// -------------------------
+
+// Ex: (12px small font / 13px base font)
+small,
+.small {
+  font-size: $small-font-size;
+}
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+
+// Transformation
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }
+
+// Lists
+// -------------------------
+
+// Unordered and Ordered lists
+ul,
+ol {
+  padding-left: $list-padding;
+  margin-top: 0;
+  margin-bottom: ($line-height-base-computed / 2);
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+// List options
+
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+  // .list-unstyled();
+  > li {
+    display: inline-block;
+    margin-left: 24px;
+    &:first-child {
+      margin-left: 0;
+    }
+    a {
+      text-decoration: none;
+    }
+    a:hover, a:focus {
+      text-decoration: underline;
+    }
+  }
+}
+.list-inline-with-icons {
+  > li {
+
+    a:hover,
+    a:focus,
+    a:hover .tmicon,
+    a:focus .tmicon {
+      text-decoration: none;
+    }
+  }
+}
+.list-inline-fit {
+  .btn {
+    min-width: 0;
+  }
+}

@@ -1,0 +1,14 @@
+html, body {
+  font-family: $font-family-montserrat;
+}
+body.modal-open {
+  overflow: hidden;
+}
+
+body.theme-default {
+  background-color: #f6f6f6;
+}
+
+body.theme-gray {
+  background-color: #eee;
+}

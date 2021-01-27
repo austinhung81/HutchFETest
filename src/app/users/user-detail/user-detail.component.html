@@ -1,0 +1,547 @@
+<div class="user-detail-wrapper">
+  <div class="profile-container">
+    <div class="profile">
+      <nz-avatar [nzSize]="64" [nzText]="userAppProfile.socialName.charAt(0)"></nz-avatar>
+      <div class="info">
+        <div class="name">
+          {{userAppProfile.socialName}}
+        </div>
+        <div class="id">
+          {{userAppProfile.hutchId}}
+        </div>
+      </div>
+    </div>
+    <div class="system-info">
+      <div><span>Region:</span> {{userAppProfile.region}}</div>
+      <div><span>Last Login Date:</span> {{userAppProfile.lastLoginDate}}</div>
+    </div>
+  </div>
+  <div class="information-container">
+    <nz-collapse nzExpandIconPosition="right">
+      <nz-collapse-panel nzHeader="User Information" [nzActive]="true">
+        <div class="user-info-panel">
+          <form nz-form>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">Social Display Name</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <span class="form-item-text">{{userAppProfile && userAppProfile.socialName}}</span>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">Hutch Id</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <span class="form-item-text">{{userAppProfile && userAppProfile.hutchId}}</span>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">App Id</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <span class="form-item-text">{{userAppProfile && userAppProfile.appId}}</span>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">Device Id</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <span class="form-item-text">{{userAppProfile && userAppProfile.deviceId}}</span>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">Region</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <span class="form-item-text">{{userAppProfile && userAppProfile.region}}</span>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">Registration Date</nz-form-label>
+              <nz-form-control [nzSm]="18" [nzXs]="24">
+                <span class="form-item-text">{{userAppProfile && userAppProfile.registrationDate}}</span>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">Last Login Date</nz-form-label>
+              <nz-form-control [nzSm]="18" [nzXs]="24">
+                <span class="form-item-text">{{userAppProfile && userAppProfile.lastLoginDate}}</span>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">Cheater</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <span class="form-item-text">N/A</span>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">Account Status</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <span class="form-item-text">N/A</span>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">Spender</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <span class="form-item-text">N/A</span>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">VIP Tier 1 Member</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <span class="form-item-text">N/A</span>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">VIP Tier 2 Member</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <span class="form-item-text">N/A</span>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">VIP Tier 3 Member</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <span class="form-item-text">N/A</span>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">VIP Tier 4 Member</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <span class="form-item-text">N/A</span>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">Limited Data Use</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <span class="form-item-text">N/A</span>
+              </nz-form-control>
+            </nz-form-item>
+          </form>
+          <form nz-form>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">Gold</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <input nz-input name="hardCurrency1" [(ngModel)]="userAppProfile && userAppProfile.hardCurrency1" />
+              </nz-form-control>
+              <button nz-button nzType="primary">Submit</button>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">Cash</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <input nz-input name="hardCurrency2" [(ngModel)]="userAppProfile && userAppProfile.hardCurrency2" />
+              </nz-form-control>
+              <button nz-button nzType="primary">Submit</button>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">Fusion Points</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <input nz-input name="softCurrency1" [(ngModel)]="userAppProfile && userAppProfile.softCurrency1" />
+              </nz-form-control>
+              <button nz-button nzType="primary">Submit</button>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">Bronze Keys</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <input nz-input name="bronzeKeys" [(ngModel)]="userAppProfile && userAppProfile.bronzeKeys" />
+              </nz-form-control>
+              <button nz-button nzType="primary">Submit</button>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">Bronze Keys</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <input nz-input name="bronzeKeys" [(ngModel)]="userAppProfile && userAppProfile.bronzeKeys" />
+              </nz-form-control>
+              <button nz-button nzType="primary">Submit</button>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">Silver Keys</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <input nz-input name="silverKeys" [(ngModel)]="userAppProfile && userAppProfile.silverKeys" />
+              </nz-form-control>
+              <button nz-button nzType="primary">Submit</button>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">Gold Keys</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <input nz-input name="goldKeys" [(ngModel)]="userAppProfile && userAppProfile.goldKeys" />
+              </nz-form-control>
+              <button nz-button nzType="primary">Submit</button>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">XP</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <input nz-input name="xp" [(ngModel)]="userAppProfile && userAppProfile.xp" />
+              </nz-form-control>
+              <button nz-button nzType="primary">Submit</button>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">Level</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <input nz-input name="level" [(ngModel)]="userAppProfile && userAppProfile.level" />
+              </nz-form-control>
+              <button nz-button nzType="primary">Submit</button>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSm]="6" [nzXs]="24">Trophies</nz-form-label>
+              <nz-form-control [nzSm]="10" [nzXs]="24">
+                <input nz-input name="trophies" [(ngModel)]="userAppProfile && userAppProfile.trophies" />
+              </nz-form-control>
+              <button nz-button nzType="primary">Submit</button>
+            </nz-form-item>
+          </form>
+        </div>
+      </nz-collapse-panel>
+    </nz-collapse>
+    <nz-tabset>
+      <nz-tab nzTitle="Player Error Logs">
+        <ng-container *ngTemplateOutlet="errorLogTab"></ng-container>
+      </nz-tab>
+      <nz-tab nzTitle="IAP Receipts">
+        <ng-container *ngTemplateOutlet="userIAPReceiptTab"></ng-container>
+      </nz-tab>
+      <nz-tab nzTitle="Offer Receipts">
+        <ng-container *ngTemplateOutlet="userOfferReceiptTab"></ng-container>
+      </nz-tab>
+      <nz-tab nzTitle="Social Details">
+        <ng-container *ngTemplateOutlet="socialAccountTab"></ng-container>
+      </nz-tab>
+      <nz-tab nzTitle="Cars">
+        <ng-container *ngTemplateOutlet="userCarTab"></ng-container>
+      </nz-tab>
+      <nz-tab nzTitle="Resources">
+        <ng-container *ngTemplateOutlet="userResourceTab"></ng-container>
+      </nz-tab>
+      <nz-tab nzTitle="Augments">
+        <ng-container *ngTemplateOutlet="userAugmentTab"></ng-container>
+      </nz-tab>
+      <nz-tab nzTitle="Fuel">
+        <ng-container *ngTemplateOutlet="fuelTab"></ng-container>
+      </nz-tab>
+      <nz-tab nzTitle="Daily Gift">
+        <ng-container *ngTemplateOutlet="dailyGiftTab"></ng-container>
+      </nz-tab>
+      <nz-tab nzTitle="Ftue">
+        <ng-container *ngTemplateOutlet="ftueTab"></ng-container>
+      </nz-tab>
+      <nz-tab nzTitle="Fusion Credits">
+        <ng-container *ngTemplateOutlet="fusionCreditTab"></ng-container>
+      </nz-tab>
+    </nz-tabset>
+  </div>
+</div>
+<ng-template #errorLogTab>
+  <nz-table nzSize="small" #errorLog [nzData]="logEntry" [nzLoading]="tableLoading" [nzPageSize]="30" [nzScroll]="{ y: '360px' }">
+    <thead>
+      <tr>
+        <th nzWidth="80px">Verbosity</th>
+        <th>Timestamp</th>
+        <th>Scope</th>
+        <th>RequestId</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of errorLog.data" class="table-row">
+        <td>
+          <ng-container *ngIf="data.warn; then warnBadge else errorBadge"></ng-container>
+        </td>
+        <td>{{data.timestamp}}</td>
+        <td>{{data.scope}}</td>
+        <td>
+            <a routerLink="/logs/requestId/{{userAppProfile.region}}/{{data.requestId}}" target="_blank">{{data.requestId}}</a>
+        </td>        
+      </tr>
+    </tbody>
+  </nz-table>
+</ng-template>
+<ng-template #userIAPReceiptTab>
+  <nz-table nzSize="small" #userIAPReceipt [nzData]="userIAPReceipts" [nzLoading]="tableLoading" [nzPageSize]="30" [nzScroll]="{ y: '360px' }">
+    <thead>
+      <tr>
+        <th>ReceiptId</th>
+        <th>Receipt Provider</th>
+        <th>ProductId</th>
+        <th>Date of Purchase</th>
+        <th>Approximate Dollar Value</th>
+        <th>Refunded</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of userIAPReceipt.data" class="table-row">
+        <td>{{data.orderId ? data.orderId : data.receiptId}}</td>
+        <td>{{data.provider}}</td>
+        <td>{{data.productId}}</td>
+        <td>{{data.dateOfPurchase}}</td>
+        <td>{{data.approximateDollarValue}}</td>
+        <td>{{data.refunded}}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+</ng-template>
+<ng-template #userOfferReceiptTab>
+  <nz-table nzSize="small" #userOfferReceipt [nzData]="userOfferReceipts" [nzLoading]="tableLoading" [nzPageSize]="30" [nzScroll]="{ y: '360px' }">
+    <thead>
+      <tr>
+        <th>OfferId</th>
+        <th>Times Claimed</th>
+        <th>Last Triggered</th>
+        <th>Last Claimed</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of userOfferReceipt.data" class="table-row">
+        <td>
+          <a routerLink="/offer/{{data.offerId}}" target="_blank">{{data.offerId}}</a>
+        </td>
+        <td>{{data.numTimesClaimed}}</td>
+        <td>{{data.triggerDates.length > 0 ? data.triggerDates[data.triggerDates.length - 1] : 'Not triggered'}}</td>
+        <td>{{data.awardDates.length > 0 ? data.awardDates[data.awardDates.length - 1] : 'Not Claimed'}}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+</ng-template>
+<ng-template #socialAccountTab>
+  <nz-table nzSize="small" #socialAccount [nzData]="socialAccounts" [nzLoading]="tableLoading" [nzPageSize]="30" [nzScroll]="{ y: '360px' }">
+    <thead>
+      <tr>
+        <th>Social Type</th>
+        <th>Social Id</th>
+        <th>User Name</th>
+        <th>Email</th>
+        <th>Locale</th>
+        <th>Region</th>
+        <th>Is Dissociated</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of socialAccount.data" class="table-row">
+        <td>{{data.socialType}}</td>
+        <td>{{data.socialId}}</td>            
+        <td>{{data.socialDetails.name}}</td>
+        <td>{{data.socialDetails.email ? data.socialDetails.email : 'N/A'}}</td>
+        <td>{{data.socialDetails.locale ? data.socialDetails.locale : 'N/A'}}</td>
+        <td>{{data.region}}</td>
+        <td>{{data.isDissociated}}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+</ng-template>
+<ng-template #userCarTab>
+  <nz-table nzSize="small" #userCar [nzData]="userCars" [nzLoading]="tableLoading" [nzPageSize]="30" [nzScroll]="{ y: '360px' }">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Car Name/ID</th>
+        <th>Star Rating</th>
+        <th nzWidth="100px">Detail</th>
+        <th nzWidth="100px">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of userCar.data" class="table-row">
+        <td>
+          <div class="static-image">
+            <img
+              nz-image
+              width="64px"
+              height="64px"
+              nzSrc="https://rrimages.azureedge.net/16/cars/{{staticDataMap.carsMap.get(data.carId).imageName}}_Thumb.png"
+              alt=""
+            />
+          </div>
+        </td>
+        <td>{{staticDataMap.carsMap.get(data.carId).modelName}}</td>            
+        <td>{{staticDataMap.carsMap.get(data.carId).stars}}</td>
+        <td><i nz-icon nzType="file-text"></i></td>
+        <td><i nz-icon nzType="delete"></i></td>
+      </tr>
+    </tbody>
+  </nz-table>
+</ng-template>
+<ng-template #userResourceTab>
+  <nz-table nzSize="small" #userResource [nzData]="userResources" [nzLoading]="tableLoading" [nzPageSize]="30" [nzScroll]="{ y: '360px' }">
+    <thead>
+      <tr>
+        <th nzWidth="80px"></th>
+        <th>ResourceId</th>  
+        <th nzWidth="80px">Category</th>  
+        <th>Name</th> 
+        <th nzWidth="80px">Level</th> 
+        <th nzWidth="80px">Amount</th>
+        <th>MaxAmount</th>
+        <th nzWidth="80px">Detail</th>
+        <th nzWidth="80px">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of userResource.data" class="table-row">
+        <td>
+          <div class="static-image">
+            <img
+              nz-image
+              width="64px"
+              height="64px"
+              nzSrc="https://rrimages.azureedge.net/16/resources/{{staticDataMap.resourceMap.get(data.resourceId).imageName}}.png"
+              alt=""
+            />
+          </div>
+        </td>
+        <td>{{data.resourceId}}</td>
+        <td>{{staticDataMap.resourceMap.get(data.resourceId).category}}</td>
+        <td>{{staticDataMap.resourceMap.get(data.resourceId).displayName}}</td>
+        <td>{{staticDataMap.resourceMap.get(data.resourceId).displayName.substr(6,1)}}</td>
+        <td>{{data.amount}}</td>
+        <td>{{staticDataMap.resourceMap.get(data.resourceId).maxAmount}}</td>
+        <td><i nz-icon nzType="file-text"></i></td>
+        <td><i nz-icon nzType="delete"></i></td>
+      </tr>
+    </tbody>
+  </nz-table>
+</ng-template>
+<ng-template #userAugmentTab>
+  <nz-table nzSize="small" #userAugment [nzData]="userAugments" [nzLoading]="tableLoading" [nzPageSize]="30" [nzScroll]="{ y: '360px' }">
+    <thead>
+      <tr>
+        <th nzWidth="80px"></th>
+        <th>Name</th>
+        <th>User Car Id</th> 
+        <th>User Augment Id</th> 
+        <th nzWidth="80px">Slot</th>
+        <th nzWidth="80px">Unequip</th> 
+        <th nzWidth="80px">Remove</th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of userAugment.data" class="table-row">
+        <td>
+          <div class="static-image">
+            <img
+              nz-image
+              width="64px"
+              height="64px"
+              nzSrc="https://rrimages.azureedge.net/16/augments/{{staticDataMap.augmentMap.get(data.augmentId).imageName}}.png"
+              alt=""
+            />
+          </div>
+        </td>
+        <td>{{staticDataMap.augmentMap.get(data.augmentId).displayName}}</td>
+        <td>{{data.userCarId ? data.userCarId : 'N/A'}}</td>
+        <td>{{data.userAugmentId}}</td>
+        <td>{{data.slot ? data.slot : 'N/A'}}</td>
+        <td><i nz-icon nzType="delete-row"></i></td>
+        <td><i nz-icon nzType="delete"></i></td>
+      </tr>
+    </tbody>
+  </nz-table>
+</ng-template>
+<ng-template #fuelTab>
+  <div class="form">
+    <form nz-form>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24">Fuel increase purchased?</nz-form-label>
+        <nz-form-control [nzSm]="10" [nzXs]="24">
+          <span class="form-item-text">No</span>
+        </nz-form-control>
+        <button nz-button nzType="primary">Purchase</button>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="remaining">Fuel remaining:</nz-form-label>
+        <nz-form-control [nzSm]="10" [nzXs]="24" >
+          <input nz-input id="remaining" name="remaining" [(ngModel)]="fuel && fuel.remaining" />
+        </nz-form-control>
+        <button nz-button nzType="primary">Set Fuel</button>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24">Next fuel available:</nz-form-label>
+        <nz-form-control [nzSm]="10" [nzXs]="24">
+          <span class="form-item-text">{{fuel && fuel.timer}}</span>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24">Max fuel:</nz-form-label>
+        <nz-form-control [nzSm]="10" [nzXs]="24">
+          <span class="form-item-text">{{fuel && fuel.max}}</span>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </div>
+</ng-template>
+<ng-template #dailyGiftTab>
+  <div class="form">
+    <form nz-form>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24">Total Gifts Claimed:</nz-form-label>
+        <nz-form-control [nzSm]="10" [nzXs]="24">
+          <input nz-input name="totalGiftsClaimed" [(ngModel)]="dailyGift && dailyGift.totalGiftsClaimed" />
+        </nz-form-control>
+        <button nz-button nzType="primary">Claim Gift</button>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24">Date Next Gift Available:</nz-form-label>
+        <nz-form-control [nzSm]="10" [nzXs]="24">
+          <span class="form-item-text">{{dailyGift && dailyGift.dateNextGiftAvailable}}</span>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24">Date Next Consecutive Gift Available:</nz-form-label>
+        <nz-form-control [nzSm]="10" [nzXs]="24">
+          <input nz-input name="dateNextConsecutiveGiftAvailable" [(ngModel)]="dailyGift && dailyGift.dateNextConsecutiveGiftAvailable" />
+        </nz-form-control>
+        <button nz-button nzType="primary">Unlock</button>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24">Consecutive Gifts Claimed:</nz-form-label>
+        <nz-form-control [nzSm]="10" [nzXs]="24">
+          <span class="form-item-text">{{dailyGift && dailyGift.consecutiveGiftsClaimed}}</span>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24">Max Consecutive Gifts Claimed:</nz-form-label>
+        <nz-form-control [nzSm]="10" [nzXs]="24">
+          <span class="form-item-text">{{dailyGift && dailyGift.maxConsecutiveGiftsClaimed}}</span>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </div>
+</ng-template>
+<ng-template #ftueTab>
+  <div class="form">
+    <form nz-form [formGroup]="fturGroup">
+      <button class="fturGroup-btn" nz-button nzType="primary">Submit all</button>
+      <div class="form-group" *ngFor="let ftueStoryProgress of ftueProgress">
+        <div class="form-group-title">
+          '{{ftueStoryProgress.ftueStory}}' FTUE
+        </div>
+        <nz-form-item>
+          <nz-form-label [nzSm]="6" [nzXs]="24">Last Step Started:</nz-form-label>
+          <nz-form-control [nzSm]="10" [nzXs]="24">
+            <nz-select [formControlName]="ftueStoryProgress.ftueStory" [(ngModel)]="ftueStoryProgress.lastStepStarted">
+              <nz-option *ngFor="let ftueStep of orderedFTUEConfig[ftueStoryProgress.version][ftueStoryProgress.ftueStory]" [nzValue]="ftueStep" [nzLabel]="ftueStep"></nz-option>
+            </nz-select>
+          </nz-form-control>
+          <button nz-button nzType="primary">Set Last Step Started</button>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-label [nzSm]="6" [nzXs]="24">Last Step Complete:</nz-form-label>
+          <nz-form-control [nzSm]="10" [nzXs]="24">
+            <nz-select [formControlName]="ftueStoryProgress.ftueStory" [(ngModel)]="ftueStoryProgress.lastStepComplete">
+              <nz-option *ngFor="let ftueStep of orderedFTUEConfig[ftueStoryProgress.version][ftueStoryProgress.ftueStory]" [nzValue]="ftueStep" [nzLabel]="ftueStep"></nz-option>
+            </nz-select>
+          </nz-form-control>
+          <button nz-button nzType="primary">Set Last Step Complete</button>
+        </nz-form-item>
+      </div>
+    </form>
+  </div>
+</ng-template>
+<ng-template #fusionCreditTab>
+  <div class="form">
+    <form nz-form [formGroup]="fusionCreditGroup">
+      <div class="form-group" *ngFor="let fusionCredit of fusionCredits">
+        <nz-form-item>
+          <nz-form-label [nzSm]="6" [nzXs]="24">{{this.carManufacturerEnumMap[fusionCredit.manufacturerId]}}</nz-form-label>
+          <nz-form-control [nzSm]="2" [nzXs]="24">
+            <nz-input-number [formControlName]="fusionCredit.manufacturerId" [[(ngModel)]="fusionCredit.amount"></nz-input-number>
+          </nz-form-control>
+          <button nz-button nzType="primary">Submit</button>
+        </nz-form-item>
+      </div>
+    </form>
+  </div>
+</ng-template>
+<ng-template #warnBadge><nz-tag [nzColor]="'#ff7633'">Warning</nz-tag></ng-template>
+<ng-template #errorBadge><nz-tag [nzColor]="'#e52630'">Error</nz-tag></ng-template>

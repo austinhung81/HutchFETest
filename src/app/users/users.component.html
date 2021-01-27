@@ -1,0 +1,20 @@
+<div class="users-wrapper">
+  <nz-table #user [nzData]="userAppProfile">
+    <thead>
+      <tr>
+        <th>Social Name</th>
+        <th>Hutch Id</th>
+        <th>App Id</th>
+        <th>Device Id</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of user.data" class="table-row" (click)="onUserClick(data.hutchId, data.socialName)">
+        <td>{{data.socialName}}</td>
+        <td>{{data.hutchId}}</td>
+        <td>{{data.appId}}</td>
+        <td>{{data.deviceId}}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>

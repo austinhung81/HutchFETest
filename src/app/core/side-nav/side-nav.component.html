@@ -1,0 +1,15 @@
+<div class="side-nav-button" (click)="expanded = !expanded">
+  <img class="page-logo" src="../../../assets/images/hutch_logo.png">
+</div>
+<div class="side-nav">
+  <ul nz-menu nzTheme="dark">
+    <li nz-menu-item routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" [nzSelected]="this.isSelected('/dashboard')">
+      <i nz-icon nzType="dashboard"></i>
+      <span>Dashboard</span>
+    </li>
+    <li nz-menu-item routerLink="/user" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" [nzSelected]="this.isSelected('/user')">
+      <i nz-icon nzType="user"></i>
+      <span>Users</span>
+    </li>
+  </ul>
+</div>  

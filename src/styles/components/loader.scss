@@ -1,0 +1,13 @@
+.loader-container {
+  position: relative;
+  top: 30px;
+}
+.section-spin > .ant-spin-nested-loading > div > .ant-spin {
+  height: calc(100% - 48px);
+  max-height: unset;
+
+  .ant-spin {
+    position: absolute;
+    top: 150px;
+  }
+}

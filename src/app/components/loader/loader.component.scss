@@ -1,0 +1,38 @@
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+:host {
+  text-align: center;
+}
+
+.loader {
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+  text-indent: -9999em;
+  vertical-align: top;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-left-color: rgba(0, 0, 0, 0.8);
+  transform: translateZ(0);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  animation: spinner 1s infinite linear;
+}
+
+.loader-small {
+  width: 16px;
+  height: 16px;
+}
+
+.loader-large {
+  width: 56px;
+  height: 56px;
+}

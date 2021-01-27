@@ -1,0 +1,9 @@
+<header class="page-header" role="banner">
+  <a routerLink="/dashboard">
+    <span class="page-heading">
+      <span *ngIf="title" class="page-title">{{ title }}</span>
+      <small *ngIf="subtitle" class="page-subtitle">{{ subtitle }}</small>
+    </span>
+  </a>
+  <ng-content></ng-content>
+</header>

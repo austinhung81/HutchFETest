@@ -1,0 +1,29 @@
+<ng-container *ngIf="loading">
+  <div class="loader-container">
+    <app-loader size="large"></app-loader>
+  </div>
+</ng-container>
+<div *ngIf="!loading">
+  <div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px">
+      <div class="card-container" fxFlex="25%" fxFlex.md="50%" fxFlex.sm="50%" fxFlex.xs="100%">
+        <div class="card">
+          <div class="card-title">Log Entries Count</div>
+          <div class="card-value">{{logEntry.length}}</div>
+        </div>
+      </div>
+      <div class="card-container" fxFlex="25%" fxFlex.md="50%" fxFlex.sm="50%" fxFlex.xs="100%">
+        <div class="card">
+          <div class="card-title">User IAP Receipts Count</div>
+          <div class="card-value">{{userIAPReceipts.length}}</div>
+        </div>
+      </div>
+      <div class="card-container" fxFlex="25%" fxFlex.md="50%" fxFlex.sm="50%" fxFlex.xs="100%">
+        <div class="card">
+          <div class="card-title">User Offer Receipts Count</div>
+          <div class="card-value">{{userOfferReceipts.length}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
