@@ -175,64 +175,6 @@
   border-color: #0096cc;
 }
 
-//== Checkbox
-
-.ant-checkbox {
-  top: 0;
-  vertical-align: top;
-  margin-top: 2px;
-}
-.ant-checkbox-group {
-  vertical-align: top;
-  font-size: 13px;
-  line-height: 20px;
-}
-.ant-checkbox + span {
-  display: inline-block;
-  padding-left: 6px;
-  padding-right: 16px;
-}
-.ant-checkbox-inner {
-  border-color: #999;
-}
-.ant-checkbox-input:focus+.ant-checkbox-inner,
-.ant-checkbox-wrapper:hover .ant-checkbox-inner,
-.ant-checkbox:hover .ant-checkbox-inner {
-  border-color: #0096cc;
-}
-.ant-checkbox-checked .ant-checkbox-inner {
-  background-color: #0096cc;
-  border-color: #0096cc;
-}
-.ant-checkbox-checked:hover .ant-checkbox-inner,
-.ant-checkbox-wrapper:hover .ant-checkbox-checked .ant-checkbox-inner{
-  border-color: #33abd6;
-  background-color: #33abd6;
-}
-
-//== Radio button
-
-.ant-radio-inner {
-  border-color: #999;
-}
-.ant-radio-focused .ant-radio-inner,
-.ant-radio-wrapper:hover .ant-radio .ant-radio-inner,
-.ant-radio:hover .ant-radio-inner {
-  border-color: #0096cc;
-}
-.ant-radio-checked .ant-radio-inner {
-  border-color: #0096cc;
-  background-color: #0096cc;
-}
-.ant-radio-checked:hover .ant-radio-inner,
-.ant-radio-wrapper-checked:hover .ant-radio-inner{
-  border-color: #33abd6;
-  background-color: #33abd6;
-}
-.ant-radio-inner:after {
-  background-color: #fff;
-}
-
 //== Select
 
 .ant-select {
@@ -317,103 +259,12 @@
   }
 }
 
-//== Message
-
-.ant-message-notice-content {
-  padding: 0;
-  background: transparent;
-}
-.ant-message-custom-content {
-  padding: 8px 16px;
-  border-radius: 3px;
-  line-height: 20px;
-  .anticon {
-    color: #444444
-  }
-  > span {
-    font-size: 13px;
-    color: #222222;
-  }
-}
-.ant-message-error {
-  background-color: #f8dcdd;
-  border: 1px solid #f3c0c3;
-}
-.ant-message-success {
-  background-color: #dbf5e7;
-  border: 1px solid #c4ebd6;
-}
-
 //== Spin
 
 .ant-spin-text {
   color: #888;
   font-size: 13px;
   margin-top: 8px;
-}
-
-//== Modal
-
-.ant-modal-mask {
-  background-color: rgba(34, 34, 34, .7);
-}
-
-.ant-modal {
-  color: #222;
-}
-
-.ant-modal,
-.ant-modal-body {
-  line-height: 20px;
-  font-size: 13px;
-}
-
-.ant-modal-content {
-  border-radius: 0 0 4px 4px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
-}
-
-.ant-modal-footer {
-  background-color: #eee;
-  border-top: 0;
-  border-radius: 0;
-  padding: 12px 24px;
-}
-
-.vertical-center-modal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.vertical-center-modal .ant-modal {
-  top: 0;
-}
-
-//== Back to top
-
-.ant-back-top {
-  right: 20px;
-  bottom: 20px;
-  width: auto;
-  height: auto;
-}
-
-.ant-back-top-content {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  font-size: 13px;
-  line-height: 20px;
-  padding: 5px 12px;
-  width: 42px;
-  height: auto;
-  transition: background-color 0.2s linear 0s, border 0.2s linear 0s;
-
-  &:hover {
-    background-color: #f4f4f4;
-    border-color: #999;
-  }
 }
 
 //== Pagination
@@ -489,38 +340,6 @@
   }
 }
 
-//== Tooltip
-
-.ant-tooltip-inner {
-  background-color: #444;
-  border: 1px solid #444;
-  border-radius: 3px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-  padding: 4px 16px;
-  max-width: 320px;
-  text-align: center;
-}
-
-.ant-tooltip-placement-top,
-.ant-tooltip-placement-topLeft,
-.ant-tooltip-placement-topRight {
-  .ant-tooltip-arrow {
-    border-top-color: #444;
-  }
-}
-
-.ant-tooltip.dark {
-  .ant-tooltip-arrow {
-    border-bottom-color: #888888;
-  }
-  .ant-tooltip-inner {
-    color: #bbbbbb;
-    background-color: #444444;
-    border: 1px solid #888888;
-    border-radius: 3px;
-    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.5);
-  }
-}
 
 //== Menu
 
@@ -646,36 +465,8 @@
   font-size: 24px;
 }
 
-//== Carousel
-.ant-carousel .slick-dots {
-  z-index: 2000;
-  bottom: 24px;
-}
-.ant-carousel .slick-list {
-  padding-bottom: 24px;
-}
-.ant-carousel .slick-dots li button {
-  background: #666666;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-}
-.ant-carousel .slick-dots li.slick-active button {
-  background: #444444;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-}
+//== Table
 
-
-//== Badge
-
-.ant-badge-dot {
-  box-shadow: none;
-  background-color: rgb(219, 61, 68);
-  border: 1px solid #222222;
-  top: 4px;
-  left: 5px;
-  width: 10px;
-  height: 10px;
+.ant-table-tbody>tr.ant-table-row:hover>td {
+  background: rgba(0, 0, 0, 0.12);
 }
